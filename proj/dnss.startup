@@ -2,3 +2,10 @@ ip addr add dev eth0 10.0.2.99/28
 ip link set dev eth0 up
 
 ip route add default via 10.0.2.97
+
+/etc/init.d/apache2 start
+a2ensite contatudo.gsr.conf
+a2ensite clientes.contatudo.gsr.conf
+a2ensite intranet.contatudo.gsr.conf
+/etc/init.d/apache2 reload
+/etc/init.d/apache2 restart
