@@ -9,3 +9,5 @@ a2ensite clientes.contatudo.gsr.conf
 a2ensite intranet.contatudo.gsr.conf
 /etc/init.d/apache2 reload
 /etc/init.d/apache2 restart
+
+/etc/init.d/bind9 start

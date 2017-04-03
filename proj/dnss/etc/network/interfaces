@@ -1,0 +1,12 @@
+iface lo inet loopback  
+auto lo
+
+# primary network interface
+auto eth0  
+iface eth0 inet static  
+        address 10.0.2.99
+        netmask 255.255.255.240
+        network 10.0.2.96
+        broadcast 10.0.2.111
+        gateway 10.0.2.97
+        dns-nameservers 8.8.8.8 8.8.4.4
