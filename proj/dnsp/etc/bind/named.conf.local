@@ -1,0 +1,18 @@
+zone "contatudo.gsr" {  
+    type master;
+    file "/etc/bind/zones/db.contatudo.gsr"; # zone file path
+    allow-transfer { 10.0.2.99; };         # ns2 private IP address – secondary
+};
+
+zone "0.0.10.in-addr.arpa" {  
+    type master;
+    file "/etc/bind/zones/db.10.0.0";  # É POSSIVEL QUE ISTO ESTEJA NA MERDA
+    allow-transfer { 10.0.2.99; };     # ns2 private IP address – secondary
+};
+
+zone "2.0.10.in-addr.arpa" {  
+    type master;
+    file "/etc/bind/zones/db.10.0.2";  # É POSSIVEL QUE ISTO ESTEJA NA MERDA
+    allow-transfer { 10.0.2.99; };     # ns2 private IP address – secondary
+};
+
