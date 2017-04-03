@@ -11,7 +11,7 @@ options {
                 8.8.4.4;
         };
 
-        dnssec-validation auto;
+        dnssec-validation yes;
 
         auth-nxdomain no;    # conform to RFC1035
         listen-on-v6 { any; };
@@ -22,20 +22,3 @@ acl "trusted" {
         10.0.2.164/26;   
 };
 
-zone "contatudo.gsr" {  
-    type master;
-    file "/etc/bind/zones/db.contatudo.gsr"; # zone file path
-    #allow-transfer { 10.1.100.42; };         # ns2 private IP address – secondary
-};
-
-zone "0.0.10.in-addr.arpa" {  
-    type master;
-    file "/etc/bind/zones/db.10.0.0";  # É POSSIVEL QUE ISTO ESTEJA NA MERDA
-    #allow-transfer { 10.1.100.42; };     # ns2 private IP address – secondary
-};
-
-zone "2.0.10.in-addr.arpa" {  
-    type master;
-    file "/etc/bind/zones/db.10.0.2";  # É POSSIVEL QUE ISTO ESTEJA NA MERDA
-    #allow-transfer { 10.1.100.42; };     # ns2 private IP address – secondary
-};

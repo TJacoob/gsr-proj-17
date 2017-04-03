@@ -18,3 +18,5 @@ $TTL	604800
 98      IN      PTR     ns1.contatudo.gsr.    ; 10.0.2.98  
 99      IN      PTR     ns2.contatudo.gsr.    ; 10.0.2.99  
 163      IN      PTR     ftp.contatudo.gsr.    ; 10.0.0.163
+
+

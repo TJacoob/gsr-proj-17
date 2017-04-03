@@ -9,5 +9,4 @@ iface eth0 inet static
         network 10.0.2.96
         broadcast 10.0.2.111
         gateway 10.0.2.97
-        dns-search contatudo.gsr
-        dns-nameservers 10.0.2.98
+        dns-nameservers 8.8.8.8 8.8.4.4
