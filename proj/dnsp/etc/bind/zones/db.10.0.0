@@ -1,0 +1,20 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	contatudo.gsr. root.contatudo.gsr. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+; name servers - NS records
+        IN      NS      ns1.contatudo.gsr.
+        IN      NS      ns2.contatudo.gsr.
+
+; PTR Records
+98      IN      PTR     ns1.contatudo.gsr.    ; 10.0.2.98  
+99      IN      PTR     ns2.contatudo.gsr.    ; 10.0.2.99  
+163      IN      PTR     ftp.contatudo.gsr.    ; 10.0.0.163

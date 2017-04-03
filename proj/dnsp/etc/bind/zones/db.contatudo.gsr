@@ -1,0 +1,27 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ns1.contatudo.gsr. admin.contatudo.gsr. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+; name servers - NS records
+        IN      NS      ns1.contatudo.gsr.
+        IN      NS      ns2.contatudo.gsr.
+;
+; name servers - A records
+ns1.contatudo.gsr.          IN      A       10.0.2.98  
+ns2.contatudo.gsr.          IN      A       10.0.2.99  
+;
+; 10.0.2.64/26 - A records - ISTO PODE TAR NA MERDA
+proxy.contatudo.gsr.        IN      A       10.0.2.100 
+clientes.contatudo.gsr.        IN      A       10.0.2.99
+intranet.contatudo.gsr.        IN      A       10.0.2.99 
+contatudo.gsr.        IN      A       10.0.2.99
+
+; 10.0.0.128/26 - A records
+ftp.contatudo.gsr.        IN      A       10.0.0.163  
