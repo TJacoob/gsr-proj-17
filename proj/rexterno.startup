@@ -9,3 +9,5 @@ ip link set dev eth2 up
 
 ip addr add dev eth3 10.0.0.17/29
 ip link set dev eth3 up
+
+/etc/init.d/zebra start
