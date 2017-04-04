@@ -2,3 +2,36 @@ ip addr add dev eth0 10.0.0.163/29
 ip link set dev eth0 up
 
 ip route add default via 10.0.0.161
+
+/etc/init.d/proftpd restart
+
+# Create User 1
+cd /home
+mkdir user1-ftp
+useradd user1 -p user1 -d /home/user1-ftp -s /bin/false
+passwd user1
+
+cd /home/user1-ftp/
+mkdir download
+mkdir upload
+
+cd /home
+chmod 755 user1-ftp
+cd user1-ftp
+chmod 755 download
+chmod 777 upload
+
+cd /home
+mkdir user2-ftp
+useradd user2 -p user2 -d /home/user2-ftp -s /bin/false
+passwd user2
+
+cd /home/user2-ftp/
+mkdir download
+mkdir upload
+
+cd /home
+chmod 755 user2-ftp
+cd user2-ftp
+chmod 755 download
+chmod 777 upload
