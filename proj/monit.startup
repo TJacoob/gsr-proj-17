@@ -2,3 +2,6 @@ ip addr add dev eth0 10.0.0.162/29
 ip link set dev eth0 up
 
 ip route add default via 10.0.0.161
+
+/etc/init.d/apache2 start
+env LANG=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg 

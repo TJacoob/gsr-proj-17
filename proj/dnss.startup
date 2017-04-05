@@ -11,3 +11,4 @@ a2ensite intranet.contatudo.gsr.conf
 /etc/init.d/apache2 restart
 
 /etc/init.d/bind9 start
+/etc/init.d/snmpd start
