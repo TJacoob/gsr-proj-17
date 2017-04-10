@@ -19,12 +19,14 @@ ns1.contatudo.gsr.          IN      A       10.0.2.98
 ns2.contatudo.gsr.          IN      A       10.0.2.99  
 mail.contatudo.gsr.			IN 		A 		10.0.2.98
 imap.contatudo.gsr.			IN 		A 		10.0.2.98
+pop.contatudo.gsr.			IN 		A 		10.0.2.98
+
 ;
 ; 10.0.2.64/26 - A records
-proxy.contatudo.gsr.        IN      A       10.0.2.100 
-clientes.contatudo.gsr.        IN      A       10.0.2.99
-intranet.contatudo.gsr.        IN      A       10.0.2.99 
-contatudo.gsr.        IN      A       10.0.2.99
+proxy.contatudo.gsr.        	IN      A       10.0.2.100 
+clientes.contatudo.gsr.        	IN      A       10.0.2.99
+intranet.contatudo.gsr.        	IN      A       10.0.2.99 
+contatudo.gsr.        			IN      A       10.0.2.99
 
 ; 10.0.0.128/26 - A records
 ftp.contatudo.gsr.        IN      A       10.0.0.163  
