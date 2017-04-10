@@ -1,3 +1,8 @@
+zone "." {
+        type hint;
+        file "/etc/bind/zones/root.servers";
+};
+
 zone "bomcliente.gsr" {  
     type master;
     file "/etc/bind/zones/db.bomcliente.gsr"; # zone file path
