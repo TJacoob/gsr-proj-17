@@ -1,0 +1,11 @@
+zone "gsr" {  
+    type master;
+    file "/etc/bind/zones/db.gsr"; # zone file path
+};
+
+zone "0.10.in-addr.arpa" {  
+    type master;
+    file "/etc/bind/zones/db.10.0"; 
+};
+
+

@@ -1,0 +1,21 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	gsr. root.gsr. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+	IN 	NS 	gsr.
+	IN 	NS 	bomcliente.gsr.
+	IN 	NS 	contatudo.gsr.
+	IN 	NS 	contatudo2.gsr.
+
+gsr. 					IN 	A 	10.0.0.34
+bomcliente.gsr. 		IN 	A 	10.0.0.10
+contatudo.gsr. 			IN 	A 	10.0.2.98
+contatudo2.gsr. 		IN 	A 	10.0.2.99
