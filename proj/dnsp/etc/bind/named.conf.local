@@ -1,3 +1,8 @@
+zone "." {
+        type hint;
+        file "/etc/bind/zones/root.servers";
+};
+
 zone "contatudo.gsr" {  
     type master;
     file "/etc/bind/zones/db.contatudo.gsr"; # zone file path
