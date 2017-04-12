@@ -1,8 +1,8 @@
 auto eth0  
 iface eth0 inet static  
-        address 10.0.0.163
+        address 192.168.0.19
         netmask 255.255.255.248
-        network 10.0.0.160
-        broadcast 10.0.0.167
-        gateway 10.0.0.161
+        network 192.168.0.16
+        broadcast 192.168.0.23
+        gateway 192.168.0.17
         dns-nameservers 10.0.2.98 10.0.2.99
