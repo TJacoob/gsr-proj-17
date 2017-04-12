@@ -1,7 +1,7 @@
-ip addr add dev eth0 10.0.0.10/29
+ip addr add dev eth0 10.0.0.6/30
 ip link set dev eth0 up
 
-ip route add default via 10.0.0.9
+ip route add default via 10.0.0.5
 
 /etc/init.d/apache2 start
 a2ensite bomcliente.gsr.conf

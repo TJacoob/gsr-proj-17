@@ -3,7 +3,7 @@ options {
 
         recursion yes;                 # enables resursive queries
         allow-recursion { trusted; };  # allows recursive queries from "trusted" clients
-        listen-on { 10.0.0.34; };    # ns1 private IP address - listen on private network only
+        listen-on { 10.0.0.14; };    # ns1 private IP address - listen on private network only
         allow-transfer { none; };      # disable zone transfers by default
 
         forwarders {
