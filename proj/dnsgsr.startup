@@ -1,6 +1,6 @@
-ip addr add dev eth0 10.0.0.14/30
+ip addr add dev eth0 10.0.0.26/30
 ip link set dev eth0 up
 
-ip route add default via 10.0.0.13
+ip route add default via 10.0.0.25
 
 /etc/init.d/bind9 start
