@@ -16,11 +16,11 @@ chmod 644 /etc/exim4/exim4.conf
 /etc/init.d/exim4 start
 /etc/init.d/inetd start
 
-#Conta de Utilizador Respetiva a um contabilista em lisboa
+# lisboa-contab1@contatudo.gsr
 cd /home
-mkdir contalx
-useradd contalx -p contalx -d /home/contalx -s /bin/false
-passwd contalx
-chmod 755 contalx
-#cd contalx
+mkdir lisboa-contab1
+useradd lisboa-contab1 -p guest -d /home/lisboa-contab1 -s /bin/false
+#passwd lisboa-contab1
+chmod 755 lisboa-contab1
+#cd lisboa-contab1
 #chmod 755 mail
