@@ -20,7 +20,14 @@ chmod 644 /etc/exim4/exim4.conf
 cd /home
 mkdir lisboa-contab1
 useradd lisboa-contab1 -p guest -d /home/lisboa-contab1 -s /bin/false
-#passwd lisboa-contab1
+usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa-contab1
 chmod 755 lisboa-contab1
-#cd lisboa-contab1
-#chmod 755 mail
+
+# lisboa@contatudo.gsr
+cd /home
+mkdir lisboa
+useradd lisboa -p guest -d /home/lisboa -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa
+chmod 755 lisboa
+
+
