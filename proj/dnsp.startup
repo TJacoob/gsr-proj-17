@@ -16,13 +16,6 @@ chmod 644 /etc/exim4/exim4.conf
 /etc/init.d/exim4 start
 /etc/init.d/inetd start
 
-# lisboa-contab1@contatudo.gsr
-cd /home
-mkdir lisboa-contab1
-useradd lisboa-contab1 -p guest -d /home/lisboa-contab1 -s /bin/false
-usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa-contab1
-chmod 755 lisboa-contab1
-
 # lisboa@contatudo.gsr
 cd /home
 mkdir lisboa
@@ -30,4 +23,16 @@ useradd lisboa -p guest -d /home/lisboa -s /bin/false
 usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa
 chmod 755 lisboa
 
+# lisboa-contab1@contatudo.gsr
+cd /home
+mkdir lisboa-contab1
+useradd lisboa-contab1 -p guest -d /home/lisboa-contab1 -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa-contab1
+chmod 755 lisboa-contab1
 
+# lisboa-contab2@contatudo.gsr
+cd /home
+mkdir lisboa-contab2
+useradd lisboa-contab2 -p guest -d /home/lisboa-contab2 -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa-contab2
+chmod 755 lisboa-contab2

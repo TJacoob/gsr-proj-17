@@ -1,1 +1,15 @@
 /etc/init.d/networking restart
+
+#Conta de Utilizador Respetiva a um contabilista em lisboa
+cd /home
+mkdir lisboa-contab2
+useradd lisboa-contab2 -p guest -d /home/lisboa-contab2 -s /bin/bash
+#passwd lisboa-contab2
+chmod 755 lisboa-contab2
+
+#Conta de Utilizador Geral
+cd /home
+mkdir geral
+useradd geral -p guest -d /home/geral -s /bin/bash
+#passwd geral
+chmod 755 geral
