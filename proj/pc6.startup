@@ -1,6 +1,6 @@
 /etc/init.d/networking restart
 
-#Conta de Utilizador Respetiva a um contabilista em lisboa
+#Conta de Utilizador Respetiva a um contabilista no porto
 cd /home
 mkdir porto-contab2
 useradd porto-contab2 -p guest -d /home/porto-contab2 -s /bin/bash

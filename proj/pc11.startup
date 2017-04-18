@@ -1,1 +1,8 @@
 /etc/init.d/networking restart
+
+#Conta de Utilizador Respetiva aos Recusos Humanos na sede
+cd /home
+mkdir rh
+useradd rh -p guest -d /home/rh -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) rh
+chmod 755 rh

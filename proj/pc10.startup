@@ -1,1 +1,8 @@
 /etc/init.d/networking restart
+
+#Conta de Utilizador Respetiva à contabilidade na sede
+cd /home
+mkdir contabilidade
+useradd contabilidade -p guest -d /home/contabilidade -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) contabilidade
+chmod 755 contabilidade

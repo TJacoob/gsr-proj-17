@@ -13,7 +13,7 @@
 # Lines beginning with "#" are comments, and ignored by Pine.
 
 # Over-rides your full name from Unix password file. Required for PC-Pine.
-personal-name=Root user on PC10
+personal-name=Recursos Humanos
 
 # Sets domain part of From: and local addresses in outgoing mail.
 user-domain=contatudo.gsr
@@ -26,7 +26,7 @@ nntp-server=
 
 # Path of (local or remote) INBOX, e.g. ={mail.somewhere.edu}inbox
 # Normal Unix default is the local INBOX (usually /usr/spool/mail/$USER).
-inbox-path={imap.contatudo.gsr/user=guest}inbox
+inbox-path={imap.contatudo.gsr/user=rh}inbox
 
 # List of folder pairs; the first indicates a folder to archive, and the
 # second indicates the folder read messages in the first should
@@ -77,7 +77,7 @@ initial-keystroke-list=
 default-composer-hdrs=
 
 # Add these customized headers (and possible default values) when composing
-customized-hdrs=Reply-To: guest@contatudo.gsr
+customized-hdrs=Reply-To: rh@contatudo.gsr
 
 # When viewing messages, include this list of headers
 viewer-hdrs=
@@ -113,7 +113,7 @@ addrbook-sort-rule=
 
 # Sets presentation order of folder list entries. Choices: alphabetical,
 # alpha-with-dirs-last, alpha-with-dirs-first.
-# Default: "alpha-with-directories-last".
+# Default: "alpha-with-rhies-last".
 folder-sort-rule=
 
 # Sets the default folder and collectionoffered at the Goto Command's prompt.
@@ -240,9 +240,9 @@ newsrc-path=
 # The default is typically "/usr/lib/news/active".
 news-active-file-path=
 
-# Directory containing system's news data.
+# rhy containing system's news data.
 # The default is typically "/usr/spool/news"
-news-spool-directory=
+news-spool-rhy=
 
 # Path and filename of the program used to upload text from your terminal
 # emulator's into Pine's composer.
@@ -292,9 +292,9 @@ newmail-window-width=
 # Syntax: optnl-label {optnl-imap-host-name}folder-path
 incoming-folders=
 
-# List of directories where saved-message folders may be. First one is
+# List of rhies where saved-message folders may be. First one is
 # the default for Saves. Example: Main {host1}mail/[], Desktop mail\[]
-# Syntax: optnl-label {optnl-imap-hostname}optnl-directory-path[]
+# Syntax: optnl-label {optnl-imap-hostname}optnl-rhy-path[]
 folder-collections=
 
 # List, only needed if nntp-server not set, or news is on a different host
@@ -323,14 +323,14 @@ last-version-used=4.64
 #                    /usr/lib/sendmail -oem -t -oi
 # or,
 #                    /usr/local/bin/sendit.sh
-# The latter a script found in Pine distribution's contrib/util directory.
+# The latter a script found in Pine distribution's contrib/util rhy.
 # NOTE: The program MUST read the message to be posted on standard input,
 #       AND operate in the style of sendmail's "-t" option.
 sendmail-path=
 
 # This names the root of the tree to which the user is restricted when reading
 # and writing folders and files.  For example, on Unix ~/work confines the
-# user to the subtree beginning with their work subdirectory.
+# user to the subtree beginning with their work subrhy.
 # (Note: this alone is not sufficient for preventing access.  You will also
 # need to restrict shell access and so on, see Pine Technical Notes.)
 # Default: not set (so no restriction)

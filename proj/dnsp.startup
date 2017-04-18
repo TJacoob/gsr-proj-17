@@ -57,3 +57,31 @@ mkdir porto-contab2
 useradd porto-contab2 -p guest -d /home/porto-contab2 -s /bin/false
 usermod --password $(echo guest | openssl passwd -1 -stdin) porto-contab2
 chmod 755 porto-contab2
+
+# director@contatudo.gsr
+cd /home
+mkdir director
+useradd director -p guest -d /home/director -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) director
+chmod 755 director
+
+# contabilidade@contatudo.gsr
+cd /home
+mkdir contabilidade
+useradd contabilidade -p guest -d /home/contabilidade -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) contabilidade
+chmod 755 contabilidade
+
+# rh@contatudo.gsr
+cd /home
+mkdir rh
+useradd rh -p guest -d /home/rh -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) rh
+chmod 755 rh
+
+# geral@contatudo.gsr
+cd /home
+mkdir geral
+useradd geral -p guest -d /home/geral -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) geral
+chmod 755 geral
