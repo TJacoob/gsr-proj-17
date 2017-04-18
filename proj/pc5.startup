@@ -1,1 +1,15 @@
 /etc/init.d/networking restart
+
+#Conta de Utilizador Respetiva a um contabilista em lisboa
+cd /home
+mkdir porto-contab1
+useradd porto-contab1 -p guest -d /home/porto-contab1 -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) porto-contab1
+chmod 755 porto-contab1
+
+#Conta de Utilizador Geral
+cd /home
+mkdir geral
+useradd geral -p guest -d /home/geral -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) geral
+chmod 755 geral
