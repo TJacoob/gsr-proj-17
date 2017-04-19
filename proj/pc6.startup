@@ -7,9 +7,8 @@ useradd porto-contab2 -p guest -d /home/porto-contab2 -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) porto-contab2
 chmod 755 porto-contab2
 
-#Conta de Utilizador Geral
+#Conta de Utilizador porto
 cd /home
-mkdir geral
-useradd geral -p guest -d /home/geral -s /bin/bash
-usermod --password $(echo guest | openssl passwd -1 -stdin) geral
-chmod 755 geral
+mkdir porto
+useradd porto -p guest -d /home/porto -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) porto

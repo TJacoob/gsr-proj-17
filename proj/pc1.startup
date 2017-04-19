@@ -7,9 +7,8 @@ useradd lisboa-contab1 -p guest -d /home/lisboa-contab1 -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa-contab1
 chmod 755 lisboa-contab1
 
-#Conta de Utilizador Geral
+#Conta de Utilizador Lisboa
 cd /home
-mkdir geral
-useradd geral -p guest -d /home/geral -s /bin/bash
-usermod --password $(echo guest | openssl passwd -1 -stdin) geral
-chmod 755 geral
+mkdir lisboa
+useradd lisboa -p guest -d /home/lisboa -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa
