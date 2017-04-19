@@ -5,7 +5,6 @@ cd /home
 mkdir lisboa-contab2
 useradd lisboa-contab2 -p guest -d /home/lisboa-contab2 -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa-contab2
-chmod 755 lisboa-contab2
 
 #Conta de Utilizador Lisboa
 cd /home

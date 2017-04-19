@@ -5,7 +5,6 @@ cd /home
 mkdir porto-contab2
 useradd porto-contab2 -p guest -d /home/porto-contab2 -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) porto-contab2
-chmod 755 porto-contab2
 
 #Conta de Utilizador porto
 cd /home
