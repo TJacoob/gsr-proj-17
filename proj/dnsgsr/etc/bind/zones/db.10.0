@@ -16,6 +16,6 @@ $TTL	604800
 	IN 	NS 	ns2.contatudo.gsr.
 
 26.0	IN 	PTR	gsr.
-6.0	IN 	PTR	ns.bomcliente.gsr.
+6.0		IN 	PTR	ns.bomcliente.gsr.
 98.2	IN 	PTR	ns1.contatudo.gsr.
 99.2	IN 	PTR	ns2.contatudo.gsr.

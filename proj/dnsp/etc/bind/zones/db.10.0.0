@@ -3,7 +3,7 @@
 ;
 $TTL	604800
 @	IN	SOA	contatudo.gsr. root.contatudo.gsr. (
-			      3		; Serial
+			      4		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
@@ -13,11 +13,11 @@ $TTL	604800
 ; name servers - NS records
         IN      NS      ns1.contatudo.gsr.
         IN      NS      ns2.contatudo.gsr.
+        IN 		NS 		gsr.
+
 
 ; PTR Records
 98      IN      PTR     ns1.contatudo.gsr.    ; 10.0.2.98  
 99      IN      PTR     ns2.contatudo.gsr.    ; 10.0.2.99  
-100     IN      PTR     proxy.contatudo.gsr.    ; 10.0.2.100 
-99      IN      PTR     clientes.contatudo.gsr.    ; 10.0.2.99 
-99      IN      PTR     intranet.contatudo.gsr.    ; 10.0.2.99 
-99      IN      PTR     contatudo.gsr.    ; 10.0.2.99 
+6		IN 		PTR		gsr.
+
