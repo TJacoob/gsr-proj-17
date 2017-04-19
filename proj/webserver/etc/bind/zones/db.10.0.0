@@ -11,8 +11,8 @@ $TTL	604800
 ;
 
 	IN 	NS 	gsr.
-	IN 	NS 	bomcliente.gsr.
+	IN 	NS 	ns.bomcliente.gsr.
 
 26		IN 	PTR	gsr.
-6		IN 	PTR	bomcliente.gsr.
+6		IN 	PTR	ns.bomcliente.gsr.
 2		IN 	PTR pc12.bomcliente.gsr.

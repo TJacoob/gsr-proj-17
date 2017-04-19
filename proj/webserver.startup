@@ -7,3 +7,20 @@ ip route add default via 10.0.0.5
 a2ensite bomcliente.gsr.conf
 
 /etc/init.d/bind9 start
+
+# Change permissions of the mail spool directory, so that the guest user is
+# allowed to write lock files.
+chmod a+w /var/spool/mail
+# Change permissions of the exim4 configuration file, to avoid errors due to
+# loose permissions
+chmod 644 /etc/exim4/exim4.conf
+
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
+
+# info@bomcliente.gsr
+cd /home
+mkdir info
+useradd info -p guest -d /home/info -s /bin/false
+usermod --password $(echo guest | openssl passwd -1 -stdin) info
+chmod 755 info

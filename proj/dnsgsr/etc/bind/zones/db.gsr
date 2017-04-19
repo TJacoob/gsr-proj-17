@@ -11,11 +11,11 @@ $TTL	604800
 ;
 
 	IN 	NS 	gsr.
-	IN 	NS 	bomcliente.gsr.
-	IN 	NS 	contatudo.gsr.
-	IN 	NS 	contatudo2.gsr.
+	IN 	NS 	ns.bomcliente.gsr.
+	IN 	NS 	ns1.contatudo.gsr.
+	IN 	NS 	ns2.contatudo.gsr.
 
 gsr. 					IN 	A 	10.0.0.26
-bomcliente.gsr. 		IN 	A 	10.0.0.6
-contatudo.gsr. 			IN 	A 	10.0.2.98
-contatudo2.gsr. 		IN 	A 	10.0.2.99
+ns.bomcliente.gsr. 		IN 	A 	10.0.0.6
+ns1.contatudo.gsr. 		IN 	A 	10.0.2.98
+ns2.contatudo.gsr. 		IN 	A 	10.0.2.99

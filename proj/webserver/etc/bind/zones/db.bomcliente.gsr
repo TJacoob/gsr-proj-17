@@ -11,8 +11,13 @@ $TTL	604800
 ;
 
 	IN 	NS 	gsr.
-	IN 	NS 	bomcliente.gsr.
+	IN 	NS 	ns.bomcliente.gsr.
+	IN 	MX	5	mail.bomcliente.gsr.
 
 gsr. 					IN 	A 	10.0.0.26
-bomcliente.gsr. 		IN 	A 	10.0.0.6
+ns.bomcliente.gsr. 		IN 	A 	10.0.0.6
 pc12.bomcliente.gsr.	IN 	A 	10.0.0.2
+
+mail.bomcliente.gsr.			IN 		A 		10.0.0.6
+imap.bomcliente.gsr.			IN 		A 		10.0.0.6
+pop.bomcliente.gsr.				IN 		A 		10.0.0.6
