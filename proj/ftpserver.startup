@@ -9,7 +9,8 @@ ip route add default via 192.168.0.17
 cd /home
 mkdir user1-ftp
 useradd user1 -p user1 -d /home/user1-ftp -s /bin/false
-passwd user1
+usermod --password $(echo guest | openssl passwd -1 -stdin) user1
+
 
 cd /home/user1-ftp/
 mkdir download
@@ -24,7 +25,8 @@ chmod 777 upload
 cd /home
 mkdir user2-ftp
 useradd user2 -p user2 -d /home/user2-ftp -s /bin/false
-passwd user2
+usermod --password $(echo guest | openssl passwd -1 -stdin) user2
+
 
 cd /home/user2-ftp/
 mkdir download

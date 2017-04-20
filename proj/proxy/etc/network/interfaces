@@ -1,9 +1,0 @@
-auto eth0  
-iface eth0 inet static  
-        address 10.0.2.100
-        netmask 255.255.255.240
-        network 10.0.2.96
-        broadcast 10.0.2.111
-        gateway 10.0.2.97
-        dns-nameservers 10.0.2.98 10.0.2.99
-

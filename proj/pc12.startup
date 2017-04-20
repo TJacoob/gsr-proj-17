@@ -2,3 +2,9 @@ ip addr add dev eth0 10.0.0.2/30
 ip link set dev eth0 up
 
 ip route add default via 10.0.0.1
+
+#Conta de Utilizador Respetiva ao bomcliente
+cd /home
+mkdir info
+useradd info -p guest -d /home/info -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) info
