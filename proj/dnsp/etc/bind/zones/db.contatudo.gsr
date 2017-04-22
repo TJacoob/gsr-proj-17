@@ -30,6 +30,14 @@ clientes.contatudo.gsr.        	IN      A       10.0.2.99
 intranet.contatudo.gsr.        	IN      A       10.0.2.99 
 contatudo.gsr.        			IN      A       10.0.2.99
 
+
 ; 192.168.0.16/29 - A records
 ftp.contatudo.gsr.        IN      A       192.168.0.19  
 
+server1							IN 		A 		10.0.2.99
+server2							IN 		A 		10.0.2.100
+
+
+
+www		IN 	CNAME	server1.contatudo.gsr.
+wpad	IN 	CNAME	server1.contatudo.gsr.

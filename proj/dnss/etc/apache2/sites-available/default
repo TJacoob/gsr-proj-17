@@ -1,16 +1,29 @@
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
-	ServerName contatudo.gsr
-	ServerAlias www.contatudo.gsr
+	ServerAlias wpad.contatudo.gsr
 
+	DocumentRoot /var/www/htdocs
+	<Directory "/var/www/contatudo.gsr/htdocs">
+                AllowOverride All
+                Options MultiViews FollowSymlinks SymLinksIfOwnerMatch IncludesNoExec
+                Options -Indexes
+                Order allow,deny
+                Allow from all
+        </Directory>
 
-
-	DocumentRoot /var/www/contatudo.gsr/public_html/
+        # serve proxy autoconfig correctly:
+        <Files "wpad.dat)">
+                AddType application/x-ns-proxy-autoconfig dat
+        </Files>
+        <Files "proxy.pac">
+                AddType application/x-ns-proxy-autoconfig pac
+        </Files>
+	
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride None
 	</Directory>
-	<Directory /var/www/contatudo.gsr/public_html>
+	<Directory /var/www/>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride None
 		Order allow,deny
@@ -41,7 +54,5 @@
         Deny from all
         Allow from 127.0.0.0/255.0.0.0 ::1/128
     </Directory>
-
-
 
 </VirtualHost>
