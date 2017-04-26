@@ -41,3 +41,17 @@ server2							IN 		A 		10.0.2.100
 
 www		IN 	CNAME	server1.contatudo.gsr.
 wpad	IN 	CNAME	server1.contatudo.gsr.
+
+
+pc1.contatudo.gsr. 			IN 		A 		192.168.0.2
+pc2.contatudo.gsr. 			IN 		A 		192.168.0.3
+pc3.contatudo.gsr. 			IN 		A 		10.0.2.66
+pc4.contatudo.gsr. 			IN 		A 		10.0.2.67
+pc5.contatudo.gsr. 			IN 		A 		192.168.0.10
+pc6.contatudo.gsr. 			IN 		A 		192.168.0.11
+pc7.contatudo.gsr. 			IN 		A 		10.0.2.82
+pc8.contatudo.gsr. 			IN 		A 		10.0.2.83
+pc9.contatudo.gsr. 			IN 		A 		10.0.2.114
+pc10.contatudo.gsr. 		IN 		A 		10.0.2.115
+pc11.contatudo.gsr. 		IN 		A 		10.0.2.116
+
