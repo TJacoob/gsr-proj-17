@@ -77,7 +77,7 @@ initial-keystroke-list=
 default-composer-hdrs=
 
 # Add these customized headers (and possible default values) when composing
-customized-hdrs=Reply-To: rh@bomcliente.gsr
+customized-hdrs=Reply-To: info@bomcliente.gsr
 
 # When viewing messages, include this list of headers
 viewer-hdrs=
