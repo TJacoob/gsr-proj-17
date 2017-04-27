@@ -1,1 +1,8 @@
 pc1 pc2 pc3 pc4 pc5 pc6 pc7 pc8 pc9 pc10 pc11: swlxadmin rlisboa rsede swprtadmin rporto swsdadmin
+
+pc2: pc1
+pc4: pc3
+pc6: pc5
+pc8: pc7
+pc10: pc9
+pc11: pc10

@@ -5,3 +5,5 @@ cd /home
 mkdir contabilidade
 useradd contabilidade -p guest -d /home/contabilidade -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) contabilidade
+
+export http_proxy='http://proxy.contatudo.gsr:8888'
