@@ -5,7 +5,8 @@ ip route add default via 10.0.0.5
 
 /etc/init.d/apache2 start
 a2ensite bomcliente.gsr.conf
-
+/etc/init.d/apache2 reload
+/etc/init.d/apache2 restart
 /etc/init.d/bind9 start
 
 # Change permissions of the mail spool directory, so that the guest user is

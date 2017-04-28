@@ -15,6 +15,10 @@ $TTL	604800
 
 gsr. 					IN 	A 	10.0.0.26
 ns.bomcliente.gsr. 		IN 	A 	10.0.0.6
+
+server							IN 		A 		10.0.0.6
+www		IN 	CNAME	server.bomcliente.gsr.
+
 bomcliente.gsr.			IN 	A	10.0.0.6
 pc12.bomcliente.gsr.	IN 	A 	10.0.0.2
 
