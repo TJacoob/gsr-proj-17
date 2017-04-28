@@ -13,18 +13,18 @@ zone "contatudo.gsr" {
 
 zone "2.0.10.in-addr.arpa" {  
     type master;
-    file "/etc/bind/zones/db.10.0.2";  # É POSSIVEL QUE ISTO ESTEJA NA MERDA
+    file "/etc/bind/zones/db.10.0.2"; 
     allow-transfer { 10.0.2.99; };     # ns2 private IP address – secondary
 };
 
 zone "0.168.192.in-addr.arpa" {  
     type master;
-    file "/etc/bind/zones/db.192.168.0";  # É POSSIVEL QUE ISTO ESTEJA NA MERDA
+    file "/etc/bind/zones/db.192.168.0";  
     allow-transfer { 10.0.2.99; };     # ns2 private IP address – secondary
 };
 
 zone "0.0.10.in-addr.arpa" {  
     type master;
-    file "/etc/bind/zones/db.10.0.0";  # É POSSIVEL QUE ISTO ESTEJA NA MERDA
+    file "/etc/bind/zones/db.10.0.0";  
     allow-transfer { 10.0.2.99; };     # ns2 private IP address – secondary
 };
