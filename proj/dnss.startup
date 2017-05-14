@@ -22,3 +22,6 @@ mkdir admin
 useradd admin -p guest -d /home/admin -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) admin
 chmod 755 admin
+
+#Start SSH Server
+/etc/init.d/ssh start
