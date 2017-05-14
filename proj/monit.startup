@@ -5,3 +5,13 @@ ip route add default via 192.168.0.17
 
 /etc/init.d/apache2 start
 env LANG=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg 
+
+#Installs sudo
+dpkg -i /../usr/sudo.deb
+
+#Admin account
+cd /home
+mkdir admin
+useradd admin -p guest -d /home/admin -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) admin
+chmod 755 admin

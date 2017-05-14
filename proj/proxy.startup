@@ -5,3 +5,13 @@ ip route add default via 10.0.2.97
 
 /etc/init.d/snmpd start
 /etc/init.d/squid start
+
+#Installs sudo
+dpkg -i /../usr/sudo.deb
+
+#Admin account
+cd /home
+mkdir admin
+useradd admin -p guest -d /home/admin -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) admin
+chmod 755 admin

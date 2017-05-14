@@ -85,3 +85,16 @@ mkdir geral
 useradd geral -p guest -d /home/geral -s /bin/false
 usermod --password $(echo guest | openssl passwd -1 -stdin) geral
 chmod 755 geral
+
+#Installs sudo
+dpkg -i /../usr/sudo.deb
+
+#Admin account
+cd /home
+mkdir admin
+useradd admin -p guest -d /home/admin -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) admin
+chmod 755 admin
+
+#Start SSH Server
+/etc/init.d/ssh start
