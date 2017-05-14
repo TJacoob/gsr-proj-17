@@ -7,6 +7,9 @@ ip link set dev eth1 up
 ip addr add dev eth3 10.0.0.21/30
 ip link set dev eth3 up
 
+ip addr add dev eth4 10.0.0.29/30
+ip link set dev eth4 up
+
 ip route add 10.0.0.20/30 via 10.0.0.22
 ip route add 10.0.0.0/30 via 10.0.0.22
 ip route add 10.0.0.4/30 via 10.0.0.22
