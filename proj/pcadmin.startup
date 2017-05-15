@@ -7,3 +7,6 @@ dpkg -i /../usr/sudo.deb
 
 #Start SSH Server
 /etc/init.d/ssh start
+
+chmod 700 /root/.ssh/
+chmod 700 /root/.ssh/id_rsa

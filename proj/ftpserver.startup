@@ -50,3 +50,6 @@ chmod 755 admin
 
 #Start SSH Server
 /etc/init.d/ssh start
+
+chmod -R 700 /home/admin/.ssh/
+chown -R admin:admin /home/admin/.ssh/
