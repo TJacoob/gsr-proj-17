@@ -7,6 +7,7 @@ ip route add default via 10.0.2.97
 a2ensite contatudo.gsr.conf
 a2ensite clientes.contatudo.gsr.conf
 a2ensite intranet.contatudo.gsr.conf
+a2enmod ssl
 /etc/init.d/apache2 reload
 /etc/init.d/apache2 restart
 
