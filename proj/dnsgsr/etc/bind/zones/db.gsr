@@ -10,12 +10,12 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 
-	IN 	NS 	gsr.
-	IN 	NS 	ns.bomcliente.gsr.
-	IN 	NS 	ns1.contatudo.gsr.
-	IN 	NS 	ns2.contatudo.gsr.
+@	IN 	NS 	ns.gsr.
+bomcliente.gsr.	IN 	NS 	ns.bomcliente.gsr.
+contatudo.gsr.	IN 	NS 	ns1.contatudo.gsr.
+contatudo.gsr.	IN 	NS 	ns2.contatudo.gsr.
 
-gsr. 					IN 	A 	10.0.0.26
+ns.gsr. 					IN 	A 	10.0.0.26
 ns.bomcliente.gsr. 		IN 	A 	10.0.0.6
 ns1.contatudo.gsr. 		IN 	A 	10.0.2.98
 ns2.contatudo.gsr. 		IN 	A 	10.0.2.99

@@ -10,13 +10,12 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 ; name servers - NS records
-		IN 		NS 		gsr.
-        IN      NS      ns1.contatudo.gsr.
-        IN      NS      ns2.contatudo.gsr.
+@        IN      NS      ns1.contatudo.gsr.
+@        IN      NS      ns2.contatudo.gsr.
         IN 		MX	5	mail.contatudo.gsr.
 ;
 ; name servers - A records
-gsr. 						IN 		A 		10.0.0.26
+
 ns1.contatudo.gsr.          IN      A       10.0.2.98  
 ns2.contatudo.gsr.          IN      A       10.0.2.99  
 mail.contatudo.gsr.			IN 		A 		10.0.2.98

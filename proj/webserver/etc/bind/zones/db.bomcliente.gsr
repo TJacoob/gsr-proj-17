@@ -9,11 +9,10 @@ $TTL	604800
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-	IN 	NS 	gsr.
-	IN 	NS 	ns.bomcliente.gsr.
+
+@	IN 	NS 	ns.bomcliente.gsr.
 	IN 	MX	5	mail.bomcliente.gsr.
 
-gsr. 					IN 	A 	10.0.0.26
 ns.bomcliente.gsr. 		IN 	A 	10.0.0.6
 
 server							IN 		A 		10.0.0.6
