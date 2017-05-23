@@ -39,6 +39,7 @@ iptables -A FORWARD -i eth5 -d 192.168.0.0/27 -j DROP
 iptables -A FORWARD -p tcp --dport 22 -d 10.0.2.96/28 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 25 -d 10.0.2.96/28 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 80 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p udp --dport 80 -d 10.0.2.96/28 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 110 -d 10.0.2.96/28 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 111 -d 10.0.2.96/28 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 143 -d 10.0.2.96/28 -j ACCEPT
@@ -49,6 +50,10 @@ iptables -A FORWARD -p tcp --dport 1194 -d 10.0.2.99 -j ACCEPT
 iptables -A FORWARD -p udp --dport 1194 -d 10.0.2.99 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 53 -d 10.0.2.96/28 -j ACCEPT
 iptables -A FORWARD -p udp --dport 53 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 8888 -d 10.0.2.100 -j ACCEPT
+iptables -A FORWARD -p udp --dport 8888 -d 10.0.2.100 -j ACCEPT
+#Range of ports which Squid listens on
+iptables -A FORWARD -p tcp --dport 1025:65535 -d 10.0.2.100 -j ACCEPT
 iptables -A FORWARD -p tcp -d 10.0.2.96/28 -j DROP
 
 #Limitar acesso ip's publicos
@@ -60,11 +65,11 @@ iptables -A FORWARD -i eth5 -j DROP
 
 #PROXY TRANSPARENT Isto faz o redirect dos visitantes
 #Nao testado neste setup
-#iptables -t nat -A PREROUTING -s 10.0.2.64/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
-#iptables -t nat -A PREROUTING -s 10.0.2.80/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
-#iptables -t nat -A PREROUTING -i eth5 -p tcp --dport 80 -j REDIRECT --to-port 8888
+iptables -t nat -A PREROUTING -s 10.0.2.64/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
+iptables -t nat -A PREROUTING -s 10.0.2.80/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
+iptables -t nat -A PREROUTING -i eth5 -p tcp --dport 80 -j REDIRECT --to-port 8888
 
 #Proxy - nao testado
 
-#iptables -A FORWARD -p tcp --dport 80 -s 10.0.2.100 -j ACCEPT
-#iptables -A FORWARD -p tcp --dport 80 -j DROP
+iptables -A FORWARD -p tcp --dport 80 -s 10.0.2.100 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -j DROP
