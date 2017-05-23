@@ -6,10 +6,6 @@ options {
         listen-on { 10.0.0.6; };    # ns1 private IP address - listen on private network only
         allow-transfer { none; };      # disable zone transfers by default
         
-        forwarders {
-                8.8.8.8;
-                8.8.4.4;
-        };
 
         dnssec-validation yes;
 
