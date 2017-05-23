@@ -16,7 +16,7 @@ contatudo.gsr.	IN 	NS 	ns1.contatudo.gsr.
 contatudo.gsr.	IN 	NS 	ns2.contatudo.gsr.
 
 
-26.0	IN 	PTR	ns.gsr.
-6.0		IN 	PTR	ns.bomcliente.gsr.
-98.2	IN 	PTR	ns1.contatudo.gsr.
-99.2	IN 	PTR	ns2.contatudo.gsr.
+26.0.0.10.in-addr.arpa.	IN 	PTR	ns.gsr.
+6.0.0.10.in-addr-arpa.	IN 	PTR	ns.bomcliente.gsr.
+98.2.0.10in-addr-arpa.	IN 	PTR	ns1.contatudo.gsr.
+99.2.0.10in-addr-arpa.	IN 	PTR	ns2.contatudo.gsr.

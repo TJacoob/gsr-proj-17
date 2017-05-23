@@ -12,6 +12,5 @@ $TTL	604800
 
 @		IN 	NS 	ns.bomcliente.gsr.
 
-6		IN 		PTR		ns.bomcliente.gsr.
-6		IN 		PTR		bomcliente.gsr.
-2		IN 		PTR 	pc12.bomcliente.gsr.
+6.0.0.10.in-addr.arpa.		IN 		PTR		ns.bomcliente.gsr.
+2.0.0.10.in-addr.arpa.		IN 		PTR 	pc12.bomcliente.gsr.

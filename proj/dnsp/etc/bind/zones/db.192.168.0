@@ -17,8 +17,8 @@ $TTL	604800
 ; PTR Records
 98      IN      PTR     ns1.contatudo.gsr.    ; 10.0.2.98  
 99      IN      PTR     ns2.contatudo.gsr.    ; 10.0.2.99  
-19.0.168.192.in-addr.arpa 	IN 		PTR 	ftp.contatudo.gsr. ;
-2.0.168.192.in-addr.arpa 	IN 		PTR 	pc1.contatudo.gsr. ;
-3.0.168.192.in-addr.arpa 	IN 		PTR 	pc2.contatudo.gsr. ;
-10.0.168.192.in-addr.arpa 	IN 		PTR 	pc5.contatudo.gsr. ;
-11.0.168.192.in-addr.arpa 	IN 		PTR 	pc6.contatudo.gsr. ;
+19.0.168.192.in-addr.arpa. 	IN 		PTR 	ftp.contatudo.gsr. ;
+2.0.168.192.in-addr.arpa. 	IN 		PTR 	pc1.contatudo.gsr. ;
+3.0.168.192.in-addr.arpa. 	IN 		PTR 	pc2.contatudo.gsr. ;
+10.0.168.192.in-addr.arpa. 	IN 		PTR 	pc5.contatudo.gsr. ;
+11.0.168.192.in-addr.arpa. 	IN 		PTR 	pc6.contatudo.gsr. ;
