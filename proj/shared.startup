@@ -1,0 +1,10 @@
+#Admin account
+cd /home
+mkdir guest
+useradd guest -p guest -d /home/admin -s /bin/bash
+usermod --password $(echo guest | openssl passwd -1 -stdin) guest
+chmod 755 guest
+
+dpkg -i /../usr/telnetd_0.17-36_i386.deb
+
+/etc/init.d/inetd start

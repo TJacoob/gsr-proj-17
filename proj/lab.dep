@@ -6,4 +6,6 @@ pc6: pc5
 pc8: pc7
 pc10: pc9
 pc11: pc10
-pcadmin: risp
+pcadmin dnsgsr: risp
+webserver: dnsgsr rcliente
+pc12: webserver

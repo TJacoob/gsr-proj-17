@@ -6,10 +6,7 @@ options {
         listen-on { 10.0.2.99; };    # ns1 private IP address - listen on private network only
         allow-transfer { none; };      # disable zone transfers by default
 
-        forwarders {
-                8.8.8.8;
-                8.8.4.4;
-        };
+
 
         dnssec-validation yes;
 
@@ -27,6 +24,7 @@ acl "trusted" {
         10.0.2.96/28;
         192.168.100.0/24;
         10.0.2.64/28;
-        10.0.2.80/28;  
+        10.0.2.80/28;
+        192.168.1.0/24;  
 };
 

@@ -31,6 +31,6 @@ chown -R admin:admin /home/admin/.ssh/
 #VPN
 /etc/init.d/openvpn start
 
-iptables -A FORWARD -i tun0 -d 192.168.0.0/24 -j ACCEPT
-iptables -A FORWARD -i tun0 -d 10.0.2.64/26 -j ACCEPT
-iptables -A FORWARD -i tun0 -d 10.0.0.128/26 -j ACCEPT
+#iptables -A FORWARD -i tun0 -d 192.168.0.0/24 -j ACCEPT
+#iptables -A FORWARD -i tun0 -d 10.0.2.64/26 -j ACCEPT
+#iptables -A FORWARD -i tun0 -d 10.0.0.128/26 -j ACCEPT

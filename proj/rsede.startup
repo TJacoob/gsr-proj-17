@@ -28,43 +28,40 @@ dpkg -i /../usr/sudo.deb
 
 # FIREWALL
 
-# Permitir o acesso dos pc's publicos à internet
-iptables -A FORWARD -p tcp --dport 80 -s 10.0.2.64/26 -j ACCEPT
-
 # Bloquear o acesso dos pc's privados à internet
-iptables -A FORWARD -p tcp --dport 80 -s 192.168.0.0/27 -j DROP			
+iptables -A FORWARD -p tcp --dport 80 -s 192.168.0.0/27 -j DROP
+iptables -A FORWARD -p tcp --dport 443 -s 192.168.0.0/27 -j DROP
 
-# Bloquear o acesso exterior aos servidores privados
-iptables -A FORWARD -p icmp -s 10.0.2.64/26 -d 192.168.0.0/27 -j ACCEPT
-# A de baixo lixa me a VPN
-#iptables -A FORWARD -p icmp -d 192.168.0.0/27 -j DROP
+#Bloquear acesso do exterior a maquinas com enderecos privados
+iptables -A FORWARD -i eth5 -d 192.168.0.0/27 -j DROP
 
-# Bloquear o Acesso do exterior aos servidores publicos,
-# excepto os serviços essenciais 
-iptables -A FORWARD -p icmp -s 192.168.0.0/27 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD -p icmp -s 10.0.2.64/26 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD -p icmp -d 10.0.2.96/28 -j DROP
-iptables -A FORWARD --dport 22 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 25 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 80 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 110 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 111 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 143 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 199 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 443 -d 10.0.2.96/28 -j ACCEPT
-iptables -A FORWARD --dport 953 -d 10.0.2.96/28 -j ACCEPT
+# Permitir apenas serviços principais
+iptables -A FORWARD -p tcp --dport 22 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 25 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 110 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 111 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 143 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 199 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 443 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 953 -d 10.0.2.96/28 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 1194 -d 10.0.2.99 -j ACCEPT
+iptables -A FORWARD -p udp --dport 1194 -d 10.0.2.99 -j ACCEPT
+iptables -A FORWARD -p tcp -d 10.0.2.96/28 -j DROP
 
-# Bloquear o acesso do exterior aos IP's publicos
-# Não está a funcionar porque não faço ideia como é que o deixo sair e voltar a entrar? XD
-#iptables -A FORWARD -p icmp -s 10.0.2.64/26 -d 10.0.2.64/26 -j ACCEPT
-#iptables -A FORWARD -p icmp -d 10.0.2.64/26 -j DROP
+#Limitar acesso ip's publicos
 
-# PC's Visitantes devem ter livre acesso à internet
-# Não está a funcionar for some reason??
-iptables -A FORWARD -p tcp --dport 80 -s 10.0.2.64/28 -j ACCEPT
+iptables -A FORWARD -i eth5 -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -i eth5 -d 10.0.2.64/28 -j ACCEPT
+iptables -A FORWARD -i eth5 -j DROP
 
+#PROXY TRANSPARENT Isto faz o redirect dos visitantes
+#Nao testado neste setup
+iptables -t nat -A PREROUTING -s 10.0.2.64/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
+iptables -t nat -A PREROUTING -s 10.0.2.80/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
+iptables -t nat -A PREROUTING -i eth5 -p tcp --dport 80 -j REDIRECT --to-port 8888
 
-#VPN related not sure if needed achoq ue ne funciona
+#Proxy - nao testado
 
-iptables -A FORWARD -d 10.0.2.99 -p tcp --dport 1194 -j ACCEPT
-iptables -A FORWARD -d 10.0.2.99 -p udp --dport 1194 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -s 10.0.2.100 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -j DROP
