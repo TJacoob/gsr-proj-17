@@ -12,5 +12,3 @@ mkdir lisboa
 useradd lisboa -p guest -d /home/lisboa -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) lisboa
 
-
-export http_proxy='http://proxy.contatudo.gsr:8888'

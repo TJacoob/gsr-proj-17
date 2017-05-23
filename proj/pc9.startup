@@ -5,5 +5,3 @@ cd /home
 mkdir director
 useradd director -p guest -d /home/director -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) director
-
-export http_proxy='http://proxy.contatudo.gsr:8888'

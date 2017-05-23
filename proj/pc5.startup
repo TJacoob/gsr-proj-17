@@ -12,4 +12,3 @@ mkdir porto
 useradd porto -p guest -d /home/porto -s /bin/bash
 usermod --password $(echo guest | openssl passwd -1 -stdin) porto
 
-export http_proxy='http://proxy.contatudo.gsr:8888'
