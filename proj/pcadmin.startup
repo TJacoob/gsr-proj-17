@@ -4,9 +4,12 @@ ip link set dev eth0 up
 ip route add default via 10.0.0.29
 
 dpkg -i /../usr/sudo.deb
+dpkg -i /../usr/resolvconf_1.42_all.deb
 
 #Start SSH Server
 /etc/init.d/ssh start
 
 chmod 700 /root/.ssh/
 chmod 700 /root/.ssh/id_rsa
+
+chmod +x /root/setupTunnel.sh

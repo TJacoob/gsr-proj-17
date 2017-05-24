@@ -5,6 +5,7 @@ ip route add default via 10.0.2.97
 
 #Installs sudo
 dpkg -i /../usr/sudo.deb
+dpkg -i /../usr/resolvconf_1.42_all.deb
 
 sudo a2enmod ssl
 a2ensite contatudo.gsr.conf
