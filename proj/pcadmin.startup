@@ -12,4 +12,5 @@ dpkg -i /../usr/resolvconf_1.42_all.deb
 chmod 700 /root/.ssh/
 chmod 700 /root/.ssh/id_rsa
 
-chmod +x /root/setupTunnel.sh
+chmod +x /root/setupFTPTunnel.sh
+chmod +x /root/setupMonitTunnel.sh

@@ -17,7 +17,7 @@ ip addr add dev eth5 10.0.0.17/30
 ip link set dev eth5 up
 
 ip route add default via 10.0.0.18
-ip route add 192.168.1.0/24 via 10.0.2.99
+ip route add 192.168.1.0/29 via 10.0.2.99
 
 
 /etc/init.d/dhcp3-server start
@@ -54,7 +54,7 @@ iptables -A FORWARD -p tcp --dport 8888 -d 10.0.2.100 -j ACCEPT
 iptables -A FORWARD -p udp --dport 8888 -d 10.0.2.100 -j ACCEPT
 #Range of ports which Squid listens on
 iptables -A FORWARD -p tcp --dport 1025:65535 -d 10.0.2.100 -j ACCEPT
-iptables -A FORWARD -p tcp -d 10.0.2.96/28 -j DROP
+iptables -A FORWARD -p all -d 10.0.2.96/28 -j DROP
 
 #Limitar acesso ip's publicos
 
@@ -67,9 +67,12 @@ iptables -A FORWARD -i eth5 -j DROP
 #Nao testado neste setup
 iptables -t nat -A PREROUTING -s 10.0.2.64/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
 iptables -t nat -A PREROUTING -s 10.0.2.80/28 -p tcp --dport 80 -j DNAT --to 10.0.2.100:8888
-iptables -t nat -A PREROUTING -i eth5 -p tcp --dport 80 -j REDIRECT --to-port 8888
+iptables -t nat -A PREROUTING -i eth5 -p tcp --dport 80 -d ! 10.0.2.99 -j REDIRECT --to-port 8888
 
 #Proxy - nao testado
 
 iptables -A FORWARD -p tcp --dport 80 -s 10.0.2.100 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 80 -j DROP
+
+iptables -A FORWARD -p tcp --dport 443 -s 10.0.2.100 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 443 -j DROP
