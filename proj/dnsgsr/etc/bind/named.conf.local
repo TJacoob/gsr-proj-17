@@ -1,7 +1,3 @@
-zone "." {  
-    type master;
-    file "/etc/bind/zones/db.root"; # zone file path
-};
 
 zone "gsr" {  
     type master;
