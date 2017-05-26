@@ -1,4 +1,9 @@
 
+zone "." {
+	type master;
+	file "/etc/bind/zones/db.root";
+};
+
 zone "gsr" {  
     type master;
     file "/etc/bind/zones/db.gsr"; # zone file path

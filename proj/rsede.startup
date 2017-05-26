@@ -54,7 +54,7 @@ iptables -A FORWARD -p tcp --dport 8888 -d 10.0.2.100 -j ACCEPT
 iptables -A FORWARD -p udp --dport 8888 -d 10.0.2.100 -j ACCEPT
 #Range of ports which Squid listens on
 iptables -A FORWARD -p tcp --dport 1025:65535 -d 10.0.2.100 -j ACCEPT
-iptables -A FORWARD -p all -d 10.0.2.96/28 -j DROP
+iptables -A FORWARD -p tcp -d 10.0.2.96/28 -j DROP
 
 #Limitar acesso ip's publicos
 
